@@ -13,3 +13,5 @@ if a > b:
     print('Максимальное число: ', a)
 else:
     print('Максимальное число: ', b)
+print(type(a))
+print(type(b))
