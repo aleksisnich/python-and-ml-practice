@@ -60,29 +60,48 @@
 # В следующих строках располагается N целых чисел. Каждое число - температура (от -50 до 50). 
 # Вычислить количество дней с положительной температурой подряд. 
 
-N = int(input('Введите количество дней: '))
-i = 1
-count = 0
-maxcount = 0
-maxnumber = 0
-if N >= 1 and N <= 100:
-    while i <= N:
-        temp = int(input('Введите температуру за каждый день: '))
-        if temp >= -50 and temp <= 50:
-            if temp >= 0:
-                count = count + 1
-                maxcount = count
-                if  maxcount > maxnumber:
-                    maxnumber = maxcount
-            else:
-                count = 0
-                maxcount = count
-        else:
-            print('Температура должна быть в диапазоне от -50 до 50 градусов') 
-        i += 1
-else:
-    print('Количество дней должно быть в диапазоне от 1 до 50')
+# N = int(input('Введите количество дней: '))
+# i = 1
+# count = 0
+# maxcount = 0
+# maxnumber = 0
+# if N >= 1 and N <= 100:
+#     while i <= N:
+#         temp = int(input('Введите температуру за каждый день: '))
+#         if temp >= -50 and temp <= 50:
+#             if temp >= 0:
+#                 count = count + 1
+#                 maxcount = count
+#                 if  maxcount > maxnumber:
+#                     maxnumber = maxcount
+#             else:
+#                 count = 0
+#                 maxcount = count
+#         else:
+#             print('Температура должна быть в диапазоне от -50 до 50 градусов') 
+#         i += 1
+# else:
+#     print('Количество дней должно быть в диапазоне от 1 до 50')
     
-print('Количество дней с положительной температурой подряд: ', maxnumber) 
+# print('Количество дней с положительной температурой подряд: ', maxnumber) 
+
+# Пользователь вводит количество арбузов N разного веса. 
+# Вторая строка содержит N чисел, записанных на новой строчке каждое. 
+# Здесь каждое число - это масса соответствующего арбуза. Надо выбрать самый легкий и самый тяжелый.
+
+N = int(input('Введите количество арбузов: '))
+i = 2
+mass = int(input('Введите массу первого арбуза: '))
+maxnumber = mass
+minnumber = mass
+while i <= N:
+    mass = int(input('Введите массу каждого арбуза, начиная со второго: '))
+    if mass > maxnumber:
+        maxnumber = mass
+    elif mass < minnumber:
+        minnumber = mass
+    i += 1    
+print('Максимальная масса арбуза: ', maxnumber) 
+print('Минимальная масса арбуза: ', minnumber) 
         
         
