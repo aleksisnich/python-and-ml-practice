@@ -100,20 +100,40 @@
 # print(*result)
 
 # ВТОРОЙ СПОСОБ        
-frozen = []
-bag = 'anton'
-result = []
-string = ''
-n = int(input('Введите количество холодильников: '))
-for i in range(n):
-    frozen.append(input("Введите шифр для каждого холодильника: "))
-#print(len(frozen))
-for i in range(n):
-    string = frozen[i]
-    res = ''
-    for j in bag:
-        if j in string:
-            res = res + j
-    if res == bag:
-        result.append(i + 1)
-print(*result)
+# frozen = []
+# bag = 'anton'
+# result = []
+# string = ''
+# n = int(input('Введите количество холодильников: '))
+# for i in range(n):
+#     frozen.append(input("Введите шифр для каждого холодильника: "))
+# #print(len(frozen))
+# for i in range(n):
+#     string = frozen[i]
+#     res = ''
+#     for j in bag:
+#         if j in string:
+#             res = res + j
+#     if res == bag:
+#         result.append(i + 1)
+# print(*result)
+
+# ДОМАШНЯЯ РАБОТА
+
+# Требуется вычислить, сколько раз встречается некоторое число X в массиве A[1...N].
+# Пользователь в первой строке вводит натуральное число N - количество элементов в массиве. 
+# В последующих строках записаны N целых чисел A. Последняя строка содержит число X.
+
+N = int(input('Введите количество чисел в массиве: '))
+A = []
+count = 0
+for i in range(N):
+    A.append(int(input("Введите любое число в массив A: ")))
+X = int(input('Какое число ищем? '))
+
+for i in A:
+    if i == X:
+        count += 1
+
+print('Количество чисел X в массиве A: ', count)
+
