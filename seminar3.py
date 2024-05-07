@@ -84,9 +84,6 @@
 # bag = 'anton'
 # result = []
 # n = int(input('Введите количество холодильников: '))
-# # for i in range(n):
-# #     frozen.append(input("Введите шифр для каждого холодильника: "))
-# # print(len(frozen))
 # for i in range(n):
 #     frozen = input("Введите шифр для каждого холодильника: ")
 #     res = ''
@@ -142,16 +139,35 @@
 # Пользователь в первой строке вводит вводит натуральное число N - количество элементов в массиве. 
 # В последующих строках записаны N целых чисел A. Последняя строка содержит число X.
 
-N = int(input('Введите количество чисел в массиве: '))
-A = [] 
-for i in range(N):
-    A.append(int(input("Введите любое число в массив A: ")))
-X = int(input('Какое близкое число ищем? ')) 
-approx = A[0]
-for i in range(N - 1):
-    if abs(approx - X) >= abs(A[i + 1] - X):
-        approx = A[i + 1]
-    # else:
-    #     print('Ближайшее значение: ', X)
-    #     break
-print('Ближайшее значение: ', approx)
+# N = int(input('Введите количество чисел в массиве: '))
+# A = [] 
+# for i in range(N):
+#     A.append(int(input("Введите любое число в массив A: ")))
+# X = int(input('Какое близкое число ищем? ')) 
+# approx = A[0]
+# for i in range(N - 1):
+#     if abs(approx - X) >= abs(A[i + 1] - X):
+#         approx = A[i + 1]
+
+# print('Ближайшее значение: ', approx)
+
+
+
+# Задача про Скрабл.
+
+word = str(input('Введите слово на русском или английском: '))
+count = 0
+dict = {1 : 'AEIOULNSTRАВЕИНОРСТaeioulnstrавеинорст', 2 : 'DGДКЛМПУdgдклмпу', 3 : 'BCMPБГЁЬЯbcmpбгёья', 4 : 'FHVWYЙЫfhvwyйы', 5 : 'KЖЗХЦЧkжзхцч', 8 : 'JXШЭЮjxшэю', 10 : 'QZФЩЪqzфщъ'}
+
+# for i in range(len(word)):
+#     for j in dict:
+#         element = dict[j]
+#         if word[i] in element:
+#             count = count + j
+            
+for i in word:
+    for j in dict:
+        if i in dict[j]:
+            count = count + j
+
+print(count)
