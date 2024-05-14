@@ -115,6 +115,49 @@
 #         result.append(i + 1)
 # print(*result)
 
+# Еще способ
+# n = int(input())
+# list1 = []
+# for i in range(n):
+#     a = input()
+#     if 'a' in a:
+#         a = a[a.find('a'):]
+#         if 'n' in a:
+#             a = a[a.find('n'):]
+#             if 't' in a:
+#                 a = a[a.find('t'):]
+#                 if 'o' in a:
+#                     a = a[a.find('o'):]
+#                     if 'n' in a:
+#                         list1.append(i + 1)                   
+# print(*list1)
+
+
+# И еще способ
+# n=int(input())
+# f=[]
+# hacker =  ['a', 'n', 't', 'o', 'n','']
+# count=0
+# otvet=[]
+# for i in range(n):
+#     u=input()
+#     f.append(u)
+# for i in range(len(f)): 
+#     hacker =  ['a', 'n', 't', 'o', 'n','']          
+#     for j in range(len(f[i])):         
+#         if f[i][j]==hacker[0]:
+#             hacker.pop(0)            
+#         if hacker==['']: 
+#             count=1+i        
+        
+#             otvet.append(count)
+          
+            
+            
+#             break
+
+# print(*otvet)
+
 # ДОМАШНЯЯ РАБОТА
 
 # Требуется вычислить, сколько раз встречается некоторое число X в массиве A[1...N].
@@ -155,9 +198,9 @@
 
 # Задача про Скрабл.
 
-word = str(input('Введите слово на русском или английском: '))
-count = 0
-dict = {1 : 'AEIOULNSTRАВЕИНОРСТaeioulnstrавеинорст', 2 : 'DGДКЛМПУdgдклмпу', 3 : 'BCMPБГЁЬЯbcmpбгёья', 4 : 'FHVWYЙЫfhvwyйы', 5 : 'KЖЗХЦЧkжзхцч', 8 : 'JXШЭЮjxшэю', 10 : 'QZФЩЪqzфщъ'}
+# word = str(input('Введите слово на русском или английском: '))
+# count = 0
+# dict = {1 : 'AEIOULNSTRАВЕИНОРСТaeioulnstrавеинорст', 2 : 'DGДКЛМПУdgдклмпу', 3 : 'BCMPБГЁЬЯbcmpбгёья', 4 : 'FHVWYЙЫfhvwyйы', 5 : 'KЖЗХЦЧkжзхцч', 8 : 'JXШЭЮjxшэю', 10 : 'QZФЩЪqzфщъ'}
 
 # for i in range(len(word)):
 #     for j in dict:
@@ -165,9 +208,9 @@ dict = {1 : 'AEIOULNSTRАВЕИНОРСТaeioulnstrавеинорст', 2 : 'DG�
 #         if word[i] in element:
 #             count = count + j
             
-for i in word:
-    for j in dict:
-        if i in dict[j]:
-            count = count + j
+# for i in word:
+#     for j in dict:
+#         if i in dict[j]:
+#             count = count + j
 
-print(count)
+# print(count)
