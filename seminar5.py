@@ -54,18 +54,53 @@
 # Напишите рекурсивную функцию sum(a,b) возвращающую сумму двух целых неотрицательных чисел. 
 # Из всех арифметических операций допускаются толькот +1 и -1.
 
-a = int(input('Введите число a: '))
-b = int(input('Введите число b: '))
+# a = int(input('Введите число a: '))
+# b = int(input('Введите число b: '))
 
-def sum(a, b):
-    if b > a:
-        c = a
-        a = b
-        b = c
-    if b == 0:
-        return a
-    return sum(a + 1, b-1)
+# def sum(a, b):
+#     if b > a:
+#         c = a
+#         a = b
+#         b = c
+#     if b == 0:
+#         return a
+#     return sum(a + 1, b-1)
 
-print(sum(a, b))
+# print(sum(a, b))
 
+# ЛЕКЦИЯ 4
 
+# В списке хранятся числа. Нужно выбрать только четные числа и составить список пар (число, квадрат числа).
+
+# n = int(input('Введите количество чисел в списке: '))
+# list = []
+# new = []
+
+# for i in range(n):
+#     list.append(int(input('Введите число в списке: ')))
+    
+# def even_number(num, new):
+#     for i in num:
+#         if i % 2 == 0:
+#             new.append((i, i*i))
+#     return(new)
+
+# print(even_number(list, new))
+    
+# Второй вариант
+
+# n = int(input('Введите количество чисел в списке: '))
+# list1 = []
+
+# for i in range(n):
+#     list1.append(int(input('Введите число в списке: ')))
+    
+# def select(f, col):
+#     return [f(x) for x in col]
+
+# def where(f, col):
+#     return [x for x in col if f(x)]
+
+# res = where(lambda x: x % 2 == 0, list1)
+# res = select(lambda x: (x, x**2), res)
+# print(res)
