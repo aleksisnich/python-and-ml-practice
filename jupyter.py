@@ -10,3 +10,12 @@ def summ(a: dict, b: dict) -> dict:
     print(a)
 
 summ(dict1, dict2)
+
+keys = ['One', 'Two', 'Three']
+values = [1, 2, 3]
+def make_dic(list1: list, list2: list) -> dict:
+    res = {}
+    for i in range(len(list1)):
+        res[i] = list2[i]
+    #print(res)
+make_dic(keys, values)
