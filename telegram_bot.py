@@ -3,7 +3,7 @@ import json
 import requests
 import telebot
 films = []
-
+API_URL = 'https://7012.deeppavlov.ai/model'
 API_TOKEN = '7002491636:AAG04JvzXm0cx2YSgwXrnYyocAG0vaXXSBo'
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -29,5 +29,21 @@ def save_all(message):
     with open("films.json", "w", encoding="utf-8") as fh:
         fh.write(json.dumps(films, ensure_ascii=False))
     bot.send_message(message.chat.id,"Наша фильмотека была успешно сохранена в файле films.json")
+
+@bot.message_handler(commands=['wiki'])
+def wiki(message):
+    quest = message.text.split()[1:]
+    qq = " ".join(quest)
+    data = { 'question_raw': [qq]}
+    try:
+        res = requests.post(API_URL,json=data,verify=False).json()
+        bot.send_message(message.chat.id, res)
+    except:
+        bot.send_message(message.chat.id, "Что-то я ничего не нашел :-(")
+
+@bot.message_handler(content_types=['text'])
+def get_text_messages(message):
+    if "дела" in message.text.lower():
+        bot.send_message(message.chat.id, "Все супер, у тебя как?")
 
 bot.polling()
