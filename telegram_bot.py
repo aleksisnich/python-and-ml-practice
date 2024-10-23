@@ -93,4 +93,4 @@ def wiki(message):
 #                                           "- Для просмотра списка книг напиши /all"
 #                                           "- Для поиска в вики напиши /wiki")
 
-bot.polling()
+bot.polling(none_stop=True, interval=0)
