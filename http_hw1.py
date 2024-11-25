@@ -38,7 +38,7 @@ else:
 
 data = response.json()
 with open('foursquare.json', 'w') as f:
-    json.dump(data, f)
+    json.dump(data, f, indent=4)
 
 for place in data.get('results'):
     print("Название заведения или локации: ", place.get('name'))
