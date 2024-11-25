@@ -34,7 +34,7 @@ else:
     print("Запрос API отклонен с кодом состояния: ", response.status_code)
 
 data = response.json()
-with open('gifs.json', 'w') as f:
+with open('../gifs.json', 'w') as f:
     json.dump(data, f)
 
 for gif in data.get('data'):
