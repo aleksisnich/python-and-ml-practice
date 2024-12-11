@@ -9,12 +9,13 @@ from itemadapter import ItemAdapter
 from pymongo import MongoClient
 
 class JobparserPipeline:
-    def __int__(self):
-        client = MongoClient('localhost', 27017)
-        self.mongo_base = client.vacancies111224
+    # def __int__(self):
+    #     client = MongoClient('localhost', 27017)
+    #     self.mongo_base = client.vacancies111224
 
     def process_item(self, item, spider):
-
+        client = MongoClient('localhost', 27017)
+        self.mongo_base = client.vacancies111224
         # item.get("salary")
         # item["min_salary"] = item.get("salary")[1]
         # item["max_salary"] = item.get("salary")[3]
