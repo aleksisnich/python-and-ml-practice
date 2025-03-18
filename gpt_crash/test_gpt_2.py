@@ -3,7 +3,8 @@ from g4f.client import Client
 client = Client()
 response = client.images.generate(
     model="flux",
-    prompt="cartoon dino with volleyball ball in red and white colors in minimalism style",
+    prompt="Valentine's Day with Volleyball Theme, boy and girl"
+           "",
     response_format="url"
 )
 
