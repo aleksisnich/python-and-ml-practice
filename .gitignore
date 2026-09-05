@@ -36,3 +36,11 @@ photos/
 # Browser drivers
 chromedriver.exe
 geckodriver.exe
+
+# Editor backup files
+*~
+
+# Generated data files
+books.json
+films.json
+gifs.json
