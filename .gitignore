@@ -44,3 +44,6 @@ geckodriver.exe
 books.json
 films.json
 gifs.json
+
+# Internal/private project
+llm_airsim/
