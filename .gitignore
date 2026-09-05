@@ -26,3 +26,13 @@ API_key.py
 # OS
 .DS_Store
 Thumbs.db
+
+# Browser/session data
+har_and_cookies/
+
+# Scrapy downloaded files
+photos/
+
+# Browser drivers
+chromedriver.exe
+geckodriver.exe
