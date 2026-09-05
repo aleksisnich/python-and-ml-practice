@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Secrets
+.env
+.env.*
+API_key.py
+*_key.py
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Cache
+.scrape_cache/
+*.cache
+
+# OS
+.DS_Store
+Thumbs.db
